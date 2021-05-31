@@ -36,6 +36,11 @@ h3 {
   font-size: 2rem;
 }
 
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -396,6 +401,10 @@ main {
   flex-direction: column;
   justify-content: center;
   padding: 4vmin 0 2vmin;
+  text-align: center;
+}
+
+#section2 .card {
   text-align: center;
 }
 
