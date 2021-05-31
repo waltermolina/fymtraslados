@@ -5,17 +5,21 @@ body {
 }
 
 body.light {
-  --foreground: #000;
-  --background: #eee;
+  --foreground: black;
+  --background: #eeeeee;
   --background-alpha: rgba(238, 238, 238, 0.8);
+  --blue-tone-50: rgba(33, 45, 83, 0.5);
+  --blue-tone-95: rgba(33, 45, 83, 0.95);
   color: var(--foreground);
   background-color: var(--background);
 }
 
 body.dark {
-  --foreground: #eee;
-  --background: #000;
+  --foreground: #eeeeee;
+  --background: black;
   --background-alpha: rgba(0, 0, 0, 0.8);
+  --blue-tone-50: rgba(0, 33, 113, 0.5);
+  --blue-tone-95: rgba(0, 33, 113, 0.95);
   color: var(--foreground);
   background-color: var(--background);
 }
@@ -34,14 +38,14 @@ h3 {
 
 .radialGradientTopLeft {
   background: #002171;
-  background-image: radial-gradient(circle at 0 0, #0d47a1 0%, #002171 100%);
-  color: #eee;
+  background-image: radial-gradient(circle at 0 0, #051c3f 0%, #002171 100%);
+  color: #eeeeee;
 }
 
 .radialGradientCenter {
   background: #002171;
-  background-image: radial-gradient(circle, #0d47a1 0%, #002171 100%);
-  color: #eee;
+  background-image: radial-gradient(circle, #051c3f 0%, #002171 100%);
+  color: #eeeeee;
 }
 
 .zoomOnHover {
@@ -158,6 +162,21 @@ aside .ctalink {
   align-self: center;
 }
 
+aside .themeselector {
+  display: flex;
+  flex-direction: row;
+}
+
+aside .themeselector button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+aside .themeselector button:nth-child(2) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -184,38 +203,41 @@ nav > #logoContainer {
 nav > #logoContainer .monogram {
   width: 4rem;
   margin-right: 1rem;
+  filter: drop-shadow(0 0 1rem black);
 }
 
 nav > #logoContainer .monogram > svg {
-  fill: #eee;
+  fill: #eeeeee;
 }
 
 nav > #logoContainer .text {
   font-size: 2rem;
-  color: #eee;
+  color: #eeeeee;
 }
 
 nav > .line {
-  background-color: #eee;
+  background-color: #eeeeee;
   height: 0.25rem;
   position: absolute;
   left: 6rem;
   right: 6rem;
   border-radius: 0.5rem;
   transition: 1s all;
+  box-shadow: 0 0 1rem black;
 }
 
 nav > button {
   background: none;
   border: none;
-  outline: rgba(238, 238, 238, 0.5);
-  color: #eee;
+  outline: #eeeeee;
+  color: #eeeeee;
   font-size: 2rem;
   cursor: pointer;
   height: 4rem;
   width: 4rem;
   padding: 0;
   transition: 0.75s all;
+  text-shadow: 0 0 1rem black;
 }
 
 #hero {
@@ -236,7 +258,7 @@ nav > button {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(circle, rgba(0, 33, 113, 0.5) 0%, rgba(0, 33, 113, 0.95) 95%);
-  box-shadow: inset -0rem 0 10rem 0px #000;
+  box-shadow: inset 0rem 0 10rem 0px black;
 }
 
 #hero > video {
@@ -258,7 +280,7 @@ nav > button {
 
 #hero > header {
   z-index: 100;
-  color: #eee;
+  color: #eeeeee;
   text-align: center;
 }
 
@@ -307,7 +329,7 @@ main {
 
 #section2 {
   margin-bottom: 4vmin;
-  color: #eee;
+  color: #eeeeee;
 }
 
 #section2 .background {
@@ -457,13 +479,13 @@ main {
 
 #section8 {
   grid-template-rows: repeat(7, 1fr);
-  color: #eee;
+  color: #eeeeee;
 }
 
 #section8 .border {
   grid-column: 4 / -4;
   grid-row: 2 / -2;
-  border: 2px solid #eee;
+  border: 2px solid #eeeeee;
 }
 
 #section8 section.info {
@@ -483,6 +505,8 @@ main {
   grid-column: 16 / span 5;
   align-self: center;
   justify-self: left;
+  color: #eeeeee;
+  border-color: #eeeeee;
 }
 
 #section8 > .ctalink.link1 {

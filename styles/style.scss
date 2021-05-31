@@ -1,30 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$darkBlue: #002171;
-$blue: #0d47a1;
-$lightBlue: #5472d3;
-$white: #eee;
-$black: #000;
-$whiteAlpha: rgba(238,238,238,0.8);
-$blackAlpha: rgba(0,0,0,0.8);
+$darkBlue: rgba(0, 33, 113, 1);
+$blue: rgba(5, 28, 63, 1);
+$lightBlue: rgba(33, 45, 83, 1);
+$white: rgba(238, 238, 238, 1);
+$black: rgba(0, 0, 0, 1);
+$whiteAlpha: rgba(238, 238, 238, 0.8);
+$blackAlpha: rgba(0, 0, 0, 0.8);
 
 body {
     font-family: "Work Sans", sans-serif;
     font-size: 1rem;
 
-    &.light{
-        
+    &.light {
         --foreground: #{$black};
         --background: #{$white};
         --background-alpha: #{$whiteAlpha};
+        --blue-tone-50: #{rgba($lightBlue, 0.5)};
+        --blue-tone-95: #{rgba($lightBlue, 0.95)};
         color: var(--foreground);
         background-color: var(--background);
     }
-    
-    &.dark{
+
+    &.dark {
         --foreground: #{$white};
         --background: #{$black};
         --background-alpha: #{$blackAlpha};
+        --blue-tone-50: #{rgba($darkBlue, 0.5)};
+        --blue-tone-95: #{rgba($darkBlue, 0.95)};
         color: var(--foreground);
         background-color: var(--background);
     }
@@ -78,7 +81,7 @@ h3 {
         margin-right: 0.5rem;
     }
 
-    &.filled{
+    &.filled {
         color: var(--background);
         background-color: var(--foreground);
         font-weight: 600;
@@ -106,7 +109,7 @@ h3 {
     }
 }
 
-aside{
+aside {
     position: fixed;
     top: 0;
     right: 0;
@@ -152,17 +155,30 @@ aside{
         }
     }
 
-    hr{
+    hr {
         width: 10rem;
         border: 2px solid var(--foreground);
         margin: 0rem 0 1rem;
         border-radius: 2px;
     }
 
-    .ctalink{
+    .ctalink {
         align-self: center;
     }
-
+    .themeselector {
+        display: flex;
+        flex-direction: row;
+        button {
+            &:first-child{
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &:nth-child(2){
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
 }
 nav {
     position: fixed;
@@ -187,6 +203,7 @@ nav {
         .monogram {
             width: 4rem;
             margin-right: 1rem;
+            filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 1));
             > svg {
                 fill: $white;
             }
@@ -204,11 +221,12 @@ nav {
         right: 6rem;
         border-radius: 0.5rem;
         transition: 1s all;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
     }
     > button {
         background: none;
         border: none;
-        outline: rgba($white, 0.5);
+        outline: $white;
         color: $white;
         font-size: 2rem;
         cursor: pointer;
@@ -216,6 +234,7 @@ nav {
         width: 4rem;
         padding: 0;
         transition: 0.75s all;
+        text-shadow: 0 0 1rem rgba(0, 0, 0, 1);
     }
 }
 
@@ -235,9 +254,9 @@ nav {
         z-index: 2;
         width: 100%;
         height: 100%;
-        //background: rgba($darkBlue, 0.75);
+        //background-color: rgba($darkBlue, 0.75);
         background-image: radial-gradient(circle, rgba($darkBlue, 0.5) 0%, rgba($darkBlue, 0.95) 95%);
-        box-shadow: inset -0rem 0 10rem 0px #000;
+        box-shadow: inset -0rem 0 10rem 0px $black;
     }
 
     > video {
@@ -281,7 +300,6 @@ main {
         top: -20vh;
     }
     */
-
 }
 .grid {
     display: grid;
@@ -461,6 +479,8 @@ main {
         grid-column: 16 / span 5;
         align-self: center;
         justify-self: left;
+        color: $white;
+        border-color: $white;
         &.link1 {
             grid-row: 3;
         }
@@ -476,5 +496,3 @@ main {
 footer {
     height: 10rem;
 }
-
-
