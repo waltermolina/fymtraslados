@@ -450,6 +450,16 @@ main {
   grid-row: 1;
 }
 
+#section3 section .icons {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#section3 section .icons > i {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
 #section4 {
   padding: 10vmin 0;
 }
