@@ -47,7 +47,16 @@ p {
     font-size: 1.5rem;
     line-height: 1.5;
 }
-
+.tag {
+    font-size: small;
+    background-color: var(--foreground);
+    color: var(--background);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: block;
+}
 .uppercase {
     text-transform: uppercase;
 }
@@ -83,6 +92,11 @@ p {
     display: flex;
     flex-wrap: nowrap;
     background-color: transparent;
+    transition: 0.6s all;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 
     > i {
         line-height: 2.5rem;
@@ -431,19 +445,6 @@ main {
     }
 }
 
-#section3 {
-    section {
-        .icons {
-            display: flex;
-            margin-bottom: 2rem;
-            > i {
-                font-size: 3rem;
-                margin-right: 1rem;
-            }
-        }
-    }
-}
-
 #section4 {
     padding: 10vmin 0;
     section {
@@ -464,6 +465,21 @@ main {
     }
 }
 
+#section3,
+#section4,
+#section5 {
+    section {
+        .icons {
+            display: flex;
+            margin-bottom: 2rem;
+            > i {
+                font-size: 3rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
 #section6 {
     margin-bottom: 4vmin;
 
@@ -475,6 +491,20 @@ main {
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+
+    .card{
+        padding-right: 2rem;
+        > h3 {
+            margin: 0 0 1rem;
+        }
+        .tag {
+            margin: 0 0 1rem;
+            display: inline-block;
+        }
+        p {
+            margin: 0 0 1rem;
+        }
     }
     .card.left {
         grid-column: 4 / span 6;

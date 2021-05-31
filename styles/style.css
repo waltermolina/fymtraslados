@@ -41,6 +41,17 @@ p {
   line-height: 1.5;
 }
 
+.tag {
+  font-size: small;
+  background-color: var(--foreground);
+  color: var(--background);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: block;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -78,6 +89,11 @@ p {
   display: flex;
   flex-wrap: nowrap;
   background-color: transparent;
+  transition: 0.6s all;
+}
+
+.ctalink:hover {
+  transform: scale(1.1);
 }
 
 .ctalink > i {
@@ -450,16 +466,6 @@ main {
   grid-row: 1;
 }
 
-#section3 section .icons {
-  display: flex;
-  margin-bottom: 2rem;
-}
-
-#section3 section .icons > i {
-  font-size: 3rem;
-  margin-right: 1rem;
-}
-
 #section4 {
   padding: 10vmin 0;
 }
@@ -483,6 +489,20 @@ main {
   grid-row: 1;
 }
 
+#section3 section .icons,
+#section4 section .icons,
+#section5 section .icons {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#section3 section .icons > i,
+#section4 section .icons > i,
+#section5 section .icons > i {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
 #section6 {
   margin-bottom: 4vmin;
 }
@@ -495,6 +515,23 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+#section6 .card {
+  padding-right: 2rem;
+}
+
+#section6 .card > h3 {
+  margin: 0 0 1rem;
+}
+
+#section6 .card .tag {
+  margin: 0 0 1rem;
+  display: inline-block;
+}
+
+#section6 .card p {
+  margin: 0 0 1rem;
 }
 
 #section6 .card.left {
