@@ -519,7 +519,9 @@ main {
 }
 
 #section6 .card {
-  padding-right: 2rem;
+  grid-column-start: 3;
+  grid-column-end: span 5;
+  grid-row: 2;
 }
 
 #section6 .card > h3 {
@@ -535,19 +537,20 @@ main {
   margin: 0 0 1rem;
 }
 
-#section6 .card.left {
-  grid-column: 4 / span 6;
-  grid-row: 2;
+#section6 .card.first {
+  grid-column-start: 3;
 }
 
-#section6 .card.center {
-  grid-column: 10 / span 6;
-  grid-row: 2;
+#section6 .card.second {
+  grid-column-start: 8;
 }
 
-#section6 .card.right {
-  grid-column: 16 / span 6;
-  grid-row: 2;
+#section6 .card.third {
+  grid-column-start: 13;
+}
+
+#section6 .card.fourth {
+  grid-column-start: 18;
 }
 
 #section7 {
@@ -717,17 +720,21 @@ footer {
   #section6 .card {
     padding-right: 0rem;
   }
-  #section6 .card.left {
+  #section6 .card.first {
     grid-column: 2 / span 4;
     grid-row: 2;
   }
-  #section6 .card.center {
+  #section6 .card.second {
     grid-column: 2 / span 4;
     grid-row: 3;
   }
-  #section6 .card.right {
+  #section6 .card.third {
     grid-column: 2 / span 4;
     grid-row: 4;
+  }
+  #section6 .card.fourth {
+    grid-column: 2 / span 4;
+    grid-row: 5;
   }
   #section7 > img {
     width: 100%;

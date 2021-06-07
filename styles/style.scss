@@ -497,7 +497,9 @@ main {
     }
 
     .card {
-        padding-right: 2rem;
+        grid-column-start: 3;
+        grid-column-end: span 5;
+        grid-row: 2;
         > h3 {
             margin: 0 0 1rem;
         }
@@ -509,17 +511,17 @@ main {
             margin: 0 0 1rem;
         }
     }
-    .card.left {
-        grid-column: 4 / span 6;
-        grid-row: 2;
+    .card.first {
+        grid-column-start: 3;
     }
-    .card.center {
-        grid-column: 10 / span 6;
-        grid-row: 2;
+    .card.second {
+        grid-column-start: 8;
     }
-    .card.right {
-        grid-column: 16 / span 6;
-        grid-row: 2;
+    .card.third {
+        grid-column-start: 13;
+    }
+    .card.fourth {
+        grid-column-start: 18;
     }
 }
 
@@ -681,17 +683,21 @@ footer {
         .card {
             padding-right: 0rem;
         }
-        .card.left {
+        .card.first {
             grid-column: 2 / span 4;
             grid-row: 2;
         }
-        .card.center {
+        .card.second {
             grid-column: 2 / span 4;
             grid-row: 3;
         }
-        .card.right {
+        .card.third {
             grid-column: 2 / span 4;
             grid-row: 4;
+        }
+        .card.fourth {
+            grid-column: 2 / span 4;
+            grid-row: 5;
         }
     }
     #section7 {
