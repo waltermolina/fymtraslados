@@ -529,7 +529,7 @@ main {
 
 #section7 {
     margin: 10vmin 0;
-    min-height: 20rem;
+    min-height: 20vmin;
 
     position: relative;
     > .monogram {
@@ -767,8 +767,7 @@ footer {
         }
     }
     #section7 {
-        .monogram {
-        }
+        
         > img {
             width: 100%;
             &:first-of-type {
