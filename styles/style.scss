@@ -662,7 +662,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    
     h1 {
         font-size: 3rem;
     }
@@ -672,12 +671,11 @@ footer {
     h3 {
         font-size: 1.6rem;
     }
-    
+
     p {
         font-size: 1rem;
         line-height: 1.5;
     }
-    
 
     .grid {
         grid-template-columns: repeat(6, 1fr);
@@ -784,7 +782,6 @@ footer {
         }
     }
     #section7 {
-        
         > img {
             width: 100%;
             &:first-of-type {
@@ -852,8 +849,29 @@ footer {
             flex-direction: row;
             > a.ctalink {
                 margin-right: 1rem;
+                flex-wrap: nowrap;
                 i {
                     margin: 0;
+                }
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    footer {
+        .networks {
+            > a.ctalink {
+                align-items: center;
+                justify-content: center;
+                i {
+                    margin: 0;
+                }
+                span {
+                    display: none;
                 }
             }
         }

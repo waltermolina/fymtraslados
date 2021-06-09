@@ -887,9 +887,26 @@ footer .networks {
   }
   footer .networks > a.ctalink {
     margin-right: 1rem;
+    flex-wrap: nowrap;
   }
   footer .networks > a.ctalink i {
     margin: 0;
+  }
+  footer .networks > a.ctalink span {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  footer .networks > a.ctalink {
+    align-items: center;
+    justify-content: center;
+  }
+  footer .networks > a.ctalink i {
+    margin: 0;
+  }
+  footer .networks > a.ctalink span {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
