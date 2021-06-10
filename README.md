@@ -9,7 +9,9 @@ Para las animaciones y las interacciones se utilizó jQuery.
 
 ____
 **Diseño y desarrollo:** [Walter Molina](https://github.com/waltermolina)
+
 **Copywriting:** [Tatiana Hotimsky](https://github.com/tatianahotimsky)
+
 **Edición Gráfica:** Luz Hotimsky
 __________
 ![with love by tachuso](https://raw.githubusercontent.com/waltermolina/fymtraslados/master/assets/tachusoVioleta50.png)
