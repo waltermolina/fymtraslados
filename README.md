@@ -1,7 +1,7 @@
 # F&M Traslados
 En este repositorio están almacenados los archivos de la web desarrollada para **F&M Traslados**.
 
-La web puede verse funcionando en [FyMTraslados.com](https://fymtraslados.com)
+La web puede verse funcionando en [este link](https://waltermolina.github.io/fymtraslados/)
 
 ## Detalles técnicos:
 Esta web simple, se realizó utilizando principalmente HTML5 y CSS3, con layouts modernos como Flexbox y CSS Grid.
